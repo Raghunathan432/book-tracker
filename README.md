@@ -5,6 +5,22 @@
   <li>A Google Developer Profile and an API key with access to Google Books API</li>
 </ul>
 
+<h2>Features</h2>
+<ul>
+  <li>Secure authentication of users powered by Firebase including email verification and password reset</li>
+  <li>Book Search powered by largest book API - Google Books API</li>
+  <li>Clean UI with ease of use</li>
+  <li>Responsive</li>
+</ul>
+
+
+<h2>Screenshots</h2>
+<img src = "https://github.com/Raghunathan432/book-tracker/blob/master/Signin.png">
+<img src = "https://github.com/Raghunathan432/book-tracker/blob/master/Home.png">
+<img src = "https://github.com/Raghunathan432/book-tracker/blob/master/Create.png">
+
+
+
 <h2>Installation</h2>
 <h4>Clone the Repository</h4>
 
@@ -44,9 +60,4 @@ export default apiKey
 ```
 $ npm run serve
 ```
-
-<h2>Screenshots</h2>
-<img src = "https://github.com/Raghunathan432/book-tracker/blob/master/Signin.png">
-<img src = "https://github.com/Raghunathan432/book-tracker/blob/master/Home.png">
-<img src = "https://github.com/Raghunathan432/book-tracker/blob/master/Create.png">
 
