@@ -19,7 +19,7 @@ $ git clone https://github.com/Raghunathan432/book-tracker.git
 $ npm install
 ```
 <h4>Setup Firebase and Books API</h4>
-<p>Open /src/firebase/config.js and replace the firebase config with your firebase config details</p>
+<p>Open /src/firebase/config.js and replace the firebase config with your firebase config details and uncomment the code</p>
 
   ```
   var firebaseConfig = { 
