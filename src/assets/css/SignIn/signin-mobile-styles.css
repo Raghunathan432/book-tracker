@@ -1,0 +1,47 @@
+@media only screen and (max-width: 576px) {
+    #signin-container {
+        display: block;
+        overflow-y: hidden;
+    }
+    #lol {
+        display: none;
+    }
+    #main-heading {
+        font-family: 'Inconsolata', sans-serif;
+        text-align: center;
+        width: 100%;
+        margin: 50px auto;
+        font-size: 44px;
+    }
+    #signin,#signup {
+        width: 80%;
+        box-shadow: none;
+        border: 1px dashed #c6c6c6;
+    }  
+    #signin-heading {
+        width: 80%;
+        font-size: 28px;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+        margin: 20px auto;
+        text-align: center;
+    }
+    form {
+        width: 90%;
+    }  
+    #signin-btn {
+        width: 50%;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    .signin-inputfield {
+        height: 40px;
+        width: 100%;
+    }
+    .signin-label {
+        font-size: 18px;    
+    }
+  
+}

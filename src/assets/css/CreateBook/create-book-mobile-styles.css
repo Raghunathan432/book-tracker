@@ -1,0 +1,59 @@
+@media only screen and (max-width : 768px) {
+    #create-book {
+        display: block;
+        width: 100%;
+        margin: 50px auto;
+        /* position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%); */
+    }
+    .create-main-heading {
+        font-size: 20px;
+       
+    }
+    #book-name, #time-taken, #rating {
+        width: 100%;
+        height: 30px;
+    }
+    #add-book-btn {
+        padding : 10px 20px;
+        margin : 20px auto !important;
+        border: none;
+        background: #1DA1F2;
+        color: #fff; 
+        border-radius: 7px;
+        /* font-weight: bold; */
+        font-family: 'Urbanist', sans-serif;
+        width: 80%;
+    }
+    /* #preview,#no-chosen-book {
+        display: none !important;
+    } */
+    #no-chosen-book {
+        padding: 0;
+        width: 90%;
+        margin: 50px auto;
+    }
+    .book-btn-container {
+        text-align: center;
+    }
+    .book-input {
+        width: 100%;
+    }
+    #book-name-input {
+        position: relative;
+    }
+    
+    #search-results {
+        width: 100%;
+        border: 1px solid #333;
+        background: #fff;
+        box-shadow: 3px 3px 10px #f4f4f4;
+        cursor: pointer;
+        position: absolute;
+    }
+    #gohome {
+        display: block !important;
+    }
+}

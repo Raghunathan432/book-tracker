@@ -1,0 +1,249 @@
+#home {
+
+}
+/* body {
+    background-color: white !important;
+} */
+#create-record-button {
+    color: #fff;
+    /* font-weight: bold; */
+    font-size: 32px;
+    /* padding : 15px; */
+    background: #1DA1F2;
+    border-radius: 50%;
+    font-family: 'Urbanist', sans-serif;
+    border: none;
+    letter-spacing: 1.5px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 50px;
+    bottom: 30px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#create-record-button:active {
+    transform: scale(0.96);
+    box-shadow: 7px 6px 15px 1px rgba(0, 0, 0, 0.24);
+}
+#user-info-card {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 16%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    /* border: 1px solid #c6c6c6; */
+    background-color: #f4f4f4;
+    /* box-shadow: 5px 5px 10px 5px  */
+    padding: 5px;
+}
+#open-user-info-card-btn {
+    display: none;
+}
+#user-info-card-mobile {
+    display: none;
+}
+#user-info-card h4,h5 {
+    margin: 15px;
+    text-align: left;
+}
+#username-on-card {
+    margin-bottom: 0 !important;
+    font-family: 'Open Sans', sans-serif;
+}
+#email-on-card {
+    margin-top: 0;
+    color: rgba(0,0,0,0.6);
+    font-size: 12px;
+}
+.email-verified-icon, .email-not-verified-icon {
+    font-size: 18px;
+    display: inline-flex;
+    vertical-align: middle;
+}
+#user-info-card-mobile-no-books {
+    display: none;
+}
+.email-verified-icon {
+    color: #4BB543;
+}
+.email-not-verified-icon {
+    color: #f0ad4e;
+}
+#verification-sent {
+    background-color: #4BB543;
+    color: white;
+    padding: 5px;
+    /* width: 100%; */
+    border-radius: 5px 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    position: absolute;
+    top: 0; right: 0;
+}
+#signout-btn-container {
+    width: 50%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+#signout-btn {
+    width: 100%;
+    font-family: 'PT Sans', sans-serif;
+    background: #ff3333;
+    color: #fff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+#signout-btn:active {
+    transform: scale(0.98);
+}
+#profileImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #1DA1F2;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    margin: 15px auto;
+}
+#dashboard-heading {
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+    width: 65%;
+    margin: 10px auto 0;
+    font-family: 'PT Sans', sans-serif;
+    /* text-align: left; */
+    color: rgba(0,0,0,0.7);
+}
+#main-heading {
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 44px;
+    text-align: center;
+}
+#books-list-container {
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    display: block;
+    background: #fff;
+    border-radius: 15px;
+}
+#books-list {
+    text-align: center;
+    width: 100%;
+}
+tr.records {
+    margin: 0px;
+    transition: all 0.2s;
+    position: relative;
+}
+tr.records:hover {
+    box-shadow: 3px 3px 15px#c6c6c6;
+}
+td {
+    margin:25px;
+}
+table {  
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px #f4f4f4;
+}
+th {
+    padding: 15px;
+    font-family: 'PT Sans', sans-serif;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.records {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+.menu {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+#create-book-modal {
+    position: absolute;
+    width: 80%;
+    height: 600px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+    z-index: 9999;
+}
+#close-modal {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+}
+.material-icons {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.material-icons:hover {
+    transform: scale(1.2);
+}
+#deleted-book {
+    color: #5cb85c;
+    font-weight: bold;
+}
+#no-books {
+    width: 50%;
+    margin: 200px auto; 
+    text-align: center;
+    overflow-y: hidden;
+}
+#books-placeholder {
+    color: rgba(0,0,0,0.6);
+    font-size : 22px;
+    font-family : 'Lato', sans-serif;
+}
+#logout-btn {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    border: none;
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: 5px;
+    font-family : 'Nunito Sans', sans-serif;
+    padding: 7.5px 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+}
+#expand-icon {
+    font-size: 24px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bold;
+}
+#logout-btn:active {
+    transform: scale(0.98);
+}
+#books-list-mobile {
+    display: none;
+}
+#get-started-btn-container {
+    display:  none;
+}
