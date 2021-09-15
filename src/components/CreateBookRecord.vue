@@ -7,15 +7,16 @@
             <h1 class = "create-main-heading">Add a book to your list.</h1>
             <div class = "book-input" id = "book-name-input">
                 <label for = "book-name">Which book did you read?</label><br>
-                <input type = "text" name = "book-name" id = "book-name" @keyup="searchBook()"  v-model = "searchQuery" required>
-                <div id = "search-results" v-if = "searchQuery != '' && results.length != 0">
+                <input type = "text" name = "book-name" id = "book-name" @keyup="searchBook()"  @focus = "searchOpenFlag = true" @blur = "closeSearchResults()" v-model = "searchQuery" required>
+                <div id = "search-results" v-if = "searchQuery != '' && results.length != 0 && searchOpenFlag">
                     <div v-for="result in results" :key="result.id" class = "book-search-result" @click = "chooseBook(result)">
                         <p class = "result-title">{{result.volumeInfo.title}}</p>
                         <div class = "authors" v-for = "author in result.volumeInfo.authors" :key = "author.id">
                             <p class = "authors">{{author}}</p>
                         </div>
-                    </div>
+                    </div>               
                 </div> 
+                
             </div>
             <div class = "book-input" id = "book-hours-input">
                 <label for = "book-name">Reading time (in hrs lesser than 50)</label><br>
@@ -23,7 +24,7 @@
             </div> 
             <div class = "book-input" id = "book-rating-input">
                 <label for = "book-name">Rating (out of 5)</label><br>
-                <input type = "number" name = "rating" id = "rating" max = 5 min = 1 v-model="rating" required />
+                <input type = "number" name = "rating" id = "rating" max = 5 min = 1 v-model="rating" required  @keyup.enter = "addBookToList()"/>
             </div> 
             <p v-if = "errorPresentCreate" id = "error-handling-text">{{this.errorMessageCreate}}</p>
             <div class = "book-btn-container">
@@ -66,6 +67,7 @@ export default {
             bookTest: '',
             errorPresentCreate: '',
             errorMessageCreate: 'Please check if your inputs satisfy the requirements', 
+            searchOpenFlag : false
         }
     },
     methods: {
@@ -81,10 +83,16 @@ export default {
             }
         },
         chooseBook(result) {
+            console.log("here")
             this.chosenBook = ({id: result.id, title: result.volumeInfo.title, authors: result.volumeInfo.authors, smallThumbnail: result.volumeInfo.imageLinks.smallThumbnail, thumbnail :  result.volumeInfo.imageLinks.thumbnail })
             this.results = []
             this.searchQuery = this.chosenBook.title
             this.bookDoesNotExist()
+        },
+        closeSearchResults() {
+            setTimeout(() => {
+                this.searchOpenFlag = false
+            }, 150)
         },
         addBookToList() {
             if(this.searchQuery != '' && this.validateInputs() && this.bookTest == true) {
